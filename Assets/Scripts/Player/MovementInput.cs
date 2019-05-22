@@ -131,6 +131,4 @@ public class MovementInput : MonoBehaviour
     {
         arma.SetActive(false);
     }
-
-
 }

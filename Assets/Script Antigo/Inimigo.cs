@@ -14,7 +14,7 @@ public class Inimigo : MonoBehaviour
     private NavMeshAgent NavMesh;
     private bool PodeAtacar;
 
-    ScoreManager scoreScript;
+    public ScoreManager scoreScript;
 
     public int vida = 100;
 
@@ -25,10 +25,21 @@ public class Inimigo : MonoBehaviour
         PodeAtacar = true;
         Torre = GameObject.FindWithTag("Torre").GetComponent<Torre>();
         Player = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
+        scoreScript = GameObject.FindWithTag("Score").GetComponent<ScoreManager>();
         NavMesh = GetComponent<NavMeshAgent>();
         NavMesh.destination = Torre.transform.position;
     }
-	
+
+
+    private void Update()
+    {
+        if (vida <= 0)
+        {
+            Destroy(gameObject);
+            scoreScript.score += points;
+        }
+    }
+
 
     void Atacar(string alvo)
     {
@@ -61,11 +72,6 @@ public class Inimigo : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             vida -= 5;
-            if(vida <= 0)
-            {
-                scoreScript.score += points;
-                Destroy(gameObject);
-            }
         }
     }
 
@@ -91,6 +97,34 @@ public class Inimigo : MonoBehaviour
         {
             Atacar(other.tag);
         }
+
+        if (other.CompareTag("WeaponHitbox"))
+        {
+            vida -= 10;
+        }
+        
+        /*
+        switch (other.tag)
+        {
+            case "Torre":
+                Atacar(other.tag);
+                Debug.Log("atacando");
+                break;
+
+
+            case "ChamaInimigoToPlayer":
+                NavMesh.destination = Player.transform.position;
+                break;
+
+
+            case "Player":
+                Player.vida -= 5;
+                break;
+
+            case "WeaponHitbox":
+                vida -= 10;
+                break;
+        }*/
     }
 
 
@@ -101,5 +135,4 @@ public class Inimigo : MonoBehaviour
             NavMesh.isStopped = false;
         }
     }
-
 }
