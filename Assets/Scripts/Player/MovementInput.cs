@@ -48,6 +48,10 @@ public class MovementInput : MonoBehaviour
     {
         InputMagnitude();
 
+        if (Input.GetKeyDown("space"))
+        {
+            anim.SetTrigger("Attack");
+        }
 
 
         //If you don't need the character grounded then get rid of this part.
