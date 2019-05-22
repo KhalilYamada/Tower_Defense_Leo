@@ -188,7 +188,23 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.26950583
+        functionName: AtivaArma
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: eadcfe59d35f34c528dce5b4ce2d196f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6754258
+        functionName: DesativaArma
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: eadcfe59d35f34c528dce5b4ce2d196f,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

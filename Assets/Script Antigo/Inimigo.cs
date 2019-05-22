@@ -60,7 +60,6 @@ public class Inimigo : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            Debug.Log("recebeuDano");
             vida -= 5;
             if(vida <= 0)
             {
@@ -81,12 +80,26 @@ public class Inimigo : MonoBehaviour
 
         if (other.CompareTag("ChamaInimigoToPlayer"))
         {
-            NavMesh.destination = Player.transform.position;            
+            NavMesh.destination = Player.transform.position;
+        }
+        else
+        {
+            NavMesh.destination = Torre.transform.position;
+        }
+
+        if (other.CompareTag("Player"))
+        {
+            Atacar(other.tag);
         }
     }
 
+
     private void OnTriggerExit(Collider other)
     {
-        NavMesh.destination = Torre.transform.position;
+        if (other.CompareTag("Player"))
+        {
+            NavMesh.isStopped = false;
+        }
     }
+
 }

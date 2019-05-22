@@ -536,8 +536,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.08492237, y: 0.16795164, z: -0.014523946, w: 0.9820232}
-  m_LocalPosition: {x: -0.36720628, y: 2.4999998, z: -1.7170355}
+  m_LocalRotation: {x: 0.10960564, y: 0.1654992, z: -0.018511249, w: 0.9799255}
+  m_LocalPosition: {x: 0.63718015, y: 1.5047058, z: 2.9715793}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1054,7 +1054,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748238053}
-  m_LocalRotation: {x: 0.18437822, y: 0.16560288, z: -0.031532884, w: 0.96829027}
+  m_LocalRotation: {x: 0.22944786, y: 0.16195796, z: -0.038750414, w: 0.9589691}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1508,6 +1508,7 @@ GameObject:
   - component: {fileID: 849503428}
   - component: {fileID: 849503427}
   - component: {fileID: 867215384}
+  - component: {fileID: 867215386}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1545,6 +1546,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &867215386
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867215383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8495578, y: 1.4860721, z: 1.6446888}
+  m_Center: {x: 0, y: 0.68, z: 0}
 --- !u!1 &867215387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4401,7 +4415,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897094254}
-  m_LocalRotation: {x: 0.10274659, y: 0.16766019, z: -0.01757236, w: 0.98031855}
+  m_LocalRotation: {x: 0.1273886, y: 0.16513574, z: -0.021514617, w: 0.9777727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4464,7 +4478,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066268847}
-  m_LocalRotation: {x: 0.08492189, y: 0.16795175, z: -0.0145239, w: 0.9820232}
+  m_LocalRotation: {x: 0.109605476, y: 0.16549945, z: -0.018511364, w: 0.9799255}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4618,6 +4632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
+  points: 100
 --- !u!136 &2084584074
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class MovementInput : MonoBehaviour
 {
+    public GameObject arma;
 
     public float InputX;
     public float InputZ;
@@ -35,7 +36,10 @@ public class MovementInput : MonoBehaviour
     private float verticalVel;
     private Vector3 moveVector;
 
-    // Use this for initialization
+
+
+
+    
     void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -118,4 +122,15 @@ public class MovementInput : MonoBehaviour
             anim.SetFloat("InputMagnitude", Speed, StopAnimTime, Time.deltaTime);
         }
     }
+
+    void AtivaArma()
+    {
+        arma.SetActive(true);
+    }
+    void DesativaArma()
+    {
+        arma.SetActive(false);
+    }
+
+
 }
