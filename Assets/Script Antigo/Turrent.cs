@@ -7,7 +7,7 @@ public class Turrent : MonoBehaviour
     private Transform target;
 
     [Header("Attributes")]
-    public float FireRate = 1f;
+    public float FireRate;
     private float FireCountdown = 0f;
     public float range = 15f;
 
@@ -22,6 +22,9 @@ public class Turrent : MonoBehaviour
     public Transform firePoint;
 
     
+
+    
+
 
 
     void Start()

@@ -10,7 +10,9 @@ using UnityEngine.AI;
 public class Inimigo : MonoBehaviour
 {
     private PlayerStats Player;
-    private Torre Torre;
+    [SerializeField]
+    public GameObject Obj;
+    public Torre torre;
     private NavMeshAgent NavMesh;
     private bool PodeAtacar;
 
@@ -23,11 +25,15 @@ public class Inimigo : MonoBehaviour
     void Start ()
     {
         PodeAtacar = true;
-        Torre = GameObject.FindWithTag("Torre").GetComponent<Torre>();
+        Obj = GameObject.FindWithTag("Torre");
+
+        torre = Obj.GetComponent<Torre>();
+
+
         Player = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
         scoreScript = GameObject.FindWithTag("Score").GetComponent<ScoreManager>();
         NavMesh = GetComponent<NavMeshAgent>();
-        NavMesh.destination = Torre.transform.position;
+        NavMesh.destination = torre.transform.position;
     }
 
 
@@ -49,7 +55,7 @@ public class Inimigo : MonoBehaviour
             switch (alvo)
             {
                 default:
-                    Torre.vida -= 5;
+                    torre.vida -= 5;
                     break;
 
                 case "Player":
@@ -73,11 +79,16 @@ public class Inimigo : MonoBehaviour
         {
             vida -= 5;
         }
+        if (other.CompareTag("WeaponHitbox"))
+        {
+            vida -= 10;
+        }
     }
 
 
     private void OnTriggerStay(Collider other)
     {
+        /*
         if (other.CompareTag("Torre"))
         {
             Atacar(other.tag);
@@ -97,13 +108,9 @@ public class Inimigo : MonoBehaviour
         {
             Atacar(other.tag);
         }
-
-        if (other.CompareTag("WeaponHitbox"))
-        {
-            vida -= 10;
-        }
+        */
         
-        /*
+        
         switch (other.tag)
         {
             case "Torre":
@@ -121,10 +128,7 @@ public class Inimigo : MonoBehaviour
                 Player.vida -= 5;
                 break;
 
-            case "WeaponHitbox":
-                vida -= 10;
-                break;
-        }*/
+        }
     }
 
 
