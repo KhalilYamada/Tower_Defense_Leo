@@ -8,7 +8,24 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class MovementInput : MonoBehaviour
 {
+    
+    [Header("General")]
+    //GameObject
+    public GameObject arma;
+    
+    //Bool
+    public bool freeze = false;
 
+    //Scripts
+    public PlayerStats stats;
+
+    //Transform
+    public Transform playerTransform;
+    public Transform respawnTransform;
+
+
+
+    [Header("Stats")]
     public float InputX;
     public float InputZ;
     public Vector3 desiredMoveDirection;
@@ -35,7 +52,7 @@ public class MovementInput : MonoBehaviour
     private float verticalVel;
     private Vector3 moveVector;
 
-    // Use this for initialization
+    
     void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -43,9 +60,11 @@ public class MovementInput : MonoBehaviour
         controller = this.GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+
+        if (freeze) return;
+
         InputMagnitude();
 
         if (Input.GetKeyDown("space"))
@@ -117,5 +136,31 @@ public class MovementInput : MonoBehaviour
         {
             anim.SetFloat("InputMagnitude", Speed, StopAnimTime, Time.deltaTime);
         }
+    }
+
+    void AtivaArma()
+    {
+        arma.SetActive(true);
+    }
+    void DesativaArma()
+    {
+        arma.SetActive(false);
+    }
+
+    public IEnumerator RespawnPlayer()
+    {
+        freeze = true;
+        anim.SetBool("Die", true);
+        stats.isDying = true;
+        controller.enabled = false;
+        yield return new WaitForSeconds(5);
+        stats.vida = 100;
+        playerTransform.transform.position = respawnTransform.transform.position;
+        anim.SetBool("Die", false);
+        //Roda particula
+        controller.enabled = true;
+        freeze = false;
+        stats.isDying = false;
+        anim.SetBool("Die", false);
     }
 }

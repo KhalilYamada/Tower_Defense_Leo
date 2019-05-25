@@ -8,6 +8,8 @@ TagManager:
   - Torre
   - ChamaInimigoToPlayer
   - Bullet
+  - WeaponHitbox
+  - Score
   layers:
   - Default
   - TransparentFX
