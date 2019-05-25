@@ -40,6 +40,7 @@ public class Torre : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha5) && pontuacao.score >= 2000 && qualTorre <= 2)
         {
             qualTorre++;
+            pontuacao.score -= 2000;
         }
 
         switch (qualTorre)
