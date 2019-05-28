@@ -518,7 +518,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.11398717, y: 0.16755015, z: -0.019507097, w: 0.9790574}
+  m_LocalRotation: {x: 0.11398716, y: 0.16754992, z: -0.019507067, w: 0.97905743}
   m_LocalPosition: {x: 0.6483069, y: 1.4918064, z: 3.0314515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1051,7 +1051,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748238053}
-  m_LocalRotation: {x: -0.23701847, y: -0.16374765, z: 0.04062677, w: -0.95674366}
+  m_LocalRotation: {x: -0.23701796, y: -0.163748, z: 0.040627647, w: -0.9567437}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1562,7 +1562,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0.68, z: 0}
 --- !u!1 &867215387
 GameObject:
@@ -9303,7 +9303,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897094254}
-  m_LocalRotation: {x: -0.13175327, y: -0.1671677, z: 0.022545164, w: -0.97682536}
+  m_LocalRotation: {x: -0.13175327, y: -0.16716759, z: 0.022545142, w: -0.9768254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9366,7 +9366,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066268847}
-  m_LocalRotation: {x: -0.11398868, y: -0.16754827, z: 0.019492062, w: -0.97905785}
+  m_LocalRotation: {x: -0.113989115, y: -0.16754821, z: 0.019491958, w: -0.97905785}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9519,6 +9519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dd7b5ce14428f4d94f9f5312ccbe75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animPlayer: {fileID: 0}
   Obj: {fileID: 0}
   torre: {fileID: 0}
   scoreScript: {fileID: 0}
