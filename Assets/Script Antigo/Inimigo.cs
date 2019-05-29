@@ -20,12 +20,20 @@ public class Inimigo : MonoBehaviour
 
     public ScoreManager scoreScript;
 
-    public int vida = 100;
+    public int vidaMax = 100;
+    public int vida;
 
     public float points = 100;
 
+    public InimigoHealth inimigoVidaUpdate;
+
+
     void Start ()
     {
+        inimigoVidaUpdate = GetComponent<InimigoHealth>();
+
+        vida = vidaMax;
+
         PodeAtacar = true;
         Obj = GameObject.FindWithTag("Torre");
 
@@ -79,11 +87,11 @@ public class Inimigo : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            vida -= 5;
+            inimigoVidaUpdate.ModifyHealth(-5);
         }
         if (other.CompareTag("WeaponHitbox"))
         {
-            vida -= 10;
+            inimigoVidaUpdate.ModifyHealth(-10);
         }
     }
 

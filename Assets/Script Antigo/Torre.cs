@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Torre : MonoBehaviour
@@ -9,6 +10,10 @@ public class Torre : MonoBehaviour
     public int vida = 100;
 
     public ScoreManager pontuacao;
+
+    [Header("Textos Level")]
+    public TextMeshProUGUI textLevel;
+    public TextMeshProUGUI textLevelUp;
 
     [Header("Torre")]
     public int qualTorre = 1;
@@ -42,13 +47,30 @@ public class Torre : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha5) && pontuacao.score >= 2000 && qualTorre <= 2)
         {
-            qualTorre++;
+            vida += 50;
             pontuacao.score -= 2000;
         }
+
+        if(vida >= 151)
+        {
+            qualTorre = 3;
+        }
+        else if (vida >= 101)
+        {
+            qualTorre = 2;
+        }
+        else
+        {
+            qualTorre = 1;
+        }
+
+
 
         switch (qualTorre)
         {
             case 1:
+                textLevel.text = "Lv.1";
+                textLevelUp.text = "Next Lv.2000";
                 hudTorre[0].SetActive(true);
                 hudTorre[1].SetActive(false);
                 hudTorre[2].SetActive(false);
@@ -58,6 +80,8 @@ public class Torre : MonoBehaviour
                 break;
 
             case 2:
+                textLevel.text = "Lv.2";
+                textLevelUp.text = "Next Lv.2000";
                 hudTorre[0].SetActive(false);
                 hudTorre[1].SetActive(true);
                 hudTorre[2].SetActive(false);
@@ -67,6 +91,8 @@ public class Torre : MonoBehaviour
                 break;
 
             case 3:
+                textLevel.text = "Lv.Max";
+                textLevelUp.text = "Next Lv.Max";
                 hudTorre[0].SetActive(false);
                 hudTorre[1].SetActive(false);
                 hudTorre[2].SetActive(true);
