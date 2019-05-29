@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Torre : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class Torre : MonoBehaviour
     [Header("Torre")]
     public int qualTorre = 1;
 
+    public GameObject[] hudTorre;
 
     public GameObject torre_01;
     public GameObject torre_02;
@@ -46,18 +49,27 @@ public class Torre : MonoBehaviour
         switch (qualTorre)
         {
             case 1:
+                hudTorre[0].SetActive(true);
+                hudTorre[1].SetActive(false);
+                hudTorre[2].SetActive(false);
                 torre_01.SetActive(true);
                 torre_02.SetActive(false);
                 torre_03.SetActive(false);
                 break;
 
             case 2:
+                hudTorre[0].SetActive(false);
+                hudTorre[1].SetActive(true);
+                hudTorre[2].SetActive(false);
                 torre_01.SetActive(false);
                 torre_02.SetActive(true);
                 torre_03.SetActive(false);
                 break;
 
             case 3:
+                hudTorre[0].SetActive(false);
+                hudTorre[1].SetActive(false);
+                hudTorre[2].SetActive(true);
                 torre_01.SetActive(false);
                 torre_02.SetActive(false);
                 torre_03.SetActive(true);

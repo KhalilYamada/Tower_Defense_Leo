@@ -1298,7 +1298,7 @@ GameObject:
   - component: {fileID: 499219802}
   - component: {fileID: 499219801}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Level Atual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1599,8 +1599,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.08491924, y: 0.16805492, z: -0.0145326, w: 0.98200566}
-  m_LocalPosition: {x: -0.36720628, y: 2.4999998, z: -1.7170355}
+  m_LocalRotation: {x: 0.11398716, y: 0.16754992, z: -0.019507067, w: 0.97905743}
+  m_LocalPosition: {x: 0.6483069, y: 1.4918064, z: 3.0314515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2137,7 +2137,7 @@ GameObject:
   - component: {fileID: 689470018}
   - component: {fileID: 689470017}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Level Atual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2452,7 +2452,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748238053}
-  m_LocalRotation: {x: -0.18436348, y: -0.16571681, z: 0.031617258, w: -0.96827084}
+  m_LocalRotation: {x: -0.23701777, y: -0.16374855, z: 0.040630795, w: -0.95674354}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2931,7 +2931,7 @@ GameObject:
   - component: {fileID: 859480090}
   - component: {fileID: 859480089}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Level Atual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6419,7 +6419,7 @@ RectTransform:
   - {fileID: 2113318872}
   - {fileID: 291191080}
   m_Father: {fileID: 1950069401}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6651,7 +6651,7 @@ GameObject:
   - component: {fileID: 1364584389}
   - component: {fileID: 1364584388}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: Level Atual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7153,6 +7153,10 @@ MonoBehaviour:
   vida: 100
   pontuacao: {fileID: 505797893}
   qualTorre: 1
+  hudTorre:
+  - {fileID: 1144618316}
+  - {fileID: 2113318871}
+  - {fileID: 291191079}
   torre_01: {fileID: 411428039}
   torre_02: {fileID: 646900253}
   torre_03: {fileID: 667077819}
@@ -12375,7 +12379,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897094254}
-  m_LocalRotation: {x: -0.10274521, y: -0.16776282, z: 0.017580738, w: -0.98030096}
+  m_LocalRotation: {x: -0.13175304, y: -0.16716757, z: 0.022544865, w: -0.9768254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -12413,7 +12417,7 @@ RectTransform:
   m_LocalScale: {x: 0.99998754, y: 0.99998754, z: 0.99998754}
   m_Children: []
   m_Father: {fileID: 1950069401}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12676,8 +12680,8 @@ RectTransform:
   m_Children:
   - {fileID: 497157437}
   - {fileID: 1364584387}
-  - {fileID: 1292265564}
   - {fileID: 1905562790}
+  - {fileID: 1292265564}
   m_Father: {fileID: 1041345697}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12801,7 +12805,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2066268847}
-  m_LocalRotation: {x: -0.08492168, y: -0.16805367, z: 0.014516928, w: -0.9820059}
+  m_LocalRotation: {x: -0.113988616, y: -0.1675481, z: 0.019491052, w: -0.9790579}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
