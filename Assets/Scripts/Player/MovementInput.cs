@@ -23,7 +23,8 @@ public class MovementInput : MonoBehaviour
     public Transform playerTransform;
     public Transform respawnTransform;
 
-
+    //Particula
+    public ParticleSystem respawnParticula;
 
     [Header("Stats")]
     public float InputX;
@@ -157,7 +158,7 @@ public class MovementInput : MonoBehaviour
         stats.vida = 100;
         playerTransform.transform.position = respawnTransform.transform.position;
         anim.SetBool("Die", false);
-        //Roda particula
+        respawnParticula.Play(true);
         controller.enabled = true;
         freeze = false;
         stats.isDying = false;

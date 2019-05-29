@@ -10,6 +10,8 @@ using UnityEngine.AI;
 public class Inimigo : MonoBehaviour
 {
     private PlayerStats Player;
+    public Animator animPlayer;
+
     [SerializeField]
     public GameObject Obj;
     public Torre torre;
@@ -29,7 +31,7 @@ public class Inimigo : MonoBehaviour
 
         torre = Obj.GetComponent<Torre>();
 
-
+        animPlayer = GameObject.FindWithTag("Player").GetComponent<Animator>();
         Player = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
         scoreScript = GameObject.FindWithTag("Score").GetComponent<ScoreManager>();
         NavMesh = GetComponent<NavMeshAgent>();
@@ -59,10 +61,10 @@ public class Inimigo : MonoBehaviour
                     break;
 
                 case "Player":
+                    animPlayer.SetTrigger("Hit");
                     Player.vida -= 5;
                     break;
             }
-                NavMesh.isStopped = true;
         }
     }
 
@@ -115,7 +117,7 @@ public class Inimigo : MonoBehaviour
         {
             case "Torre":
                 Atacar(other.tag);
-                Debug.Log("atacando");
+                Debug.Log("atacandoTorre");
                 break;
 
 
@@ -125,7 +127,11 @@ public class Inimigo : MonoBehaviour
 
 
             case "Player":
-                Player.vida -= 5;
+                NavMesh.isStopped = true;
+                if (Player.vida >= 1)
+                {
+                    Atacar(other.tag);
+                }                
                 break;
 
         }
